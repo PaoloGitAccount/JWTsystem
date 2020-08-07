@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\JWTsystem\obj\Debug\netcoreapp3.1\JWTsystem.csprojAssemblyReference.cache
+C:\Users\User\source\repos\JWTsystem\obj\Debug\netcoreapp3.1\JWTsystem.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\JWTsystem\obj\Debug\netcoreapp3.1\JWTsystem.AssemblyInfo.cs
+C:\Users\User\source\repos\JWTsystem\obj\Debug\netcoreapp3.1\JWTsystem.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\JWTsystem\obj\Debug\netcoreapp3.1\JWTsystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\JWTsystem\obj\Debug\netcoreapp3.1\JWTsystem.RazorAssemblyInfo.cache
+C:\Users\User\source\repos\JWTsystem\obj\Debug\netcoreapp3.1\JWTsystem.RazorAssemblyInfo.cs
