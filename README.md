@@ -18,11 +18,12 @@ connection string in the appsettings.json.
 <p>For the REST API, used the API Controller with actions using the Entity Framework template, using the context class UsersDbContext.</p>
 <p>Both the REST APIs for the JWT controller and the UserInfo tested using Postman.</p>
 <p>The second project, for the UI part, added a UserInfo controller, using EntityFramework for CRUD operations for the users tasks, i.e. Create/Edit/Delete etc.</p>
-
-Visual Studio 2019
-ASP.NET Core 3.1
-SQL Server 2019, localdb
-Postman
+<ul>
+    <li>Visual Studio 2019</li>
+    <li>ASP.NET Core 3.1</li>
+    <li>SQL Server 2019, localdb</li>
+    <li>Postman</li>
+    </ul>
 
 Examples of the API endpoints:
 <p>https://localhost:44396/api/userInfo (GET)</p>
