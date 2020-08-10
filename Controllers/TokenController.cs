@@ -31,9 +31,9 @@ namespace JWTsystem.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(UserInfo _userData)
         {
-            if (_userData != null && _userData.Email != null && _userData.Password != null)
+            if (_userData != null && _userData.UserName != null && _userData.Password != null)
             {
-                var user = await GetUser(_userData.Email, _userData.Password);
+                var user = await GetUser(_userData.UserName, _userData.Password);
 
                 if (user != null)
                 {
@@ -66,9 +66,9 @@ namespace JWTsystem.Controllers
             }
         }
 
-        private async Task<UserInfo> GetUser(string email, string password)
+        private async Task<UserInfo> GetUser(string username, string password)
         {
-            return await _context.UserInfo.FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+            return await _context.UserInfo.FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
         }
     }
 }
