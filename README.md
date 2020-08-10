@@ -12,9 +12,9 @@ Used as .NET framework, .NET Core 3.1 , dependency Injection for sql connection,
 
 Created a database, using sql Server 2019. details below.
 connection string in the appsettings.json.
-Run following script to reverse engineer the database to create database context and entity POCO classes from tables. The scaffold command will create POCO class only for the tables that have a primary key:
-Scaffold-DbContext ìServer=(localdb)\MSSQLLocalDB;Database=UsersDb;Integrated Security=Trueî Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
-SERVER: (localdb)\MSSQLLocalDB
+<p>Run following script to reverse engineer the database to create database context and entity POCO classes from tables. The scaffold command will create POCO class only for the tables that have a primary key:</p>
+<p>Scaffold-DbContext ‚ÄúServer=(localdb)\MSSQLLocalDB;Database=UsersDb;Integrated Security=True‚Äù Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models </p>
+<p>SERVER: (localdb)\MSSQLLocalDB</p>
 For the REST API, used the API Controller with actions using the Entity Framework template, using the context class UsersDbContext.
 Both the REST APIs for the JWT controller and the UserInfo tested using Postman.
 The second project, for the UI part, added a UserInfo controller, using EntityFramework for CRUD operations for the users tasks, i.e. Create/Edit/Delete etc.
@@ -25,8 +25,8 @@ SQL Server 2019, localdb
 Postman
 
 Examples of the API endpoints:
-https://localhost:44396/api/userInfo (GET)
-https://localhost:44396/api/token (POST)
+<p>https://localhost:44396/api/userInfo (GET)</p>
+<p>https://localhost:44396/api/token (POST) </p>
 
 -------------------------------------------
 Create Table UserInfo(
@@ -48,7 +48,7 @@ Insert Into UserInfo(UserName, Email, Password)
 Values ('user2','u12@email.com', 'psw2')
 -------------------------------------------
 scripts details:
-Scaffold-DbContext ìServer=(localdb)\MSSQLLocalDB;Database=UsersDb;Integrated Security=Trueî Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext ‚ÄúServer=(localdb)\MSSQLLocalDB;Database=UsersDb;Integrated Security=True‚Äù Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 SERVER: (localdb)\MSSQLLocalDB
 Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=UsersDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
 
