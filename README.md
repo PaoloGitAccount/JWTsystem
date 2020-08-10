@@ -15,9 +15,9 @@ connection string in the appsettings.json.
 <p>Run following script to reverse engineer the database to create database context and entity POCO classes from tables. The scaffold command will create POCO class only for the tables that have a primary key:</p>
 <p>Scaffold-DbContext “Server=(localdb)\MSSQLLocalDB;Database=UsersDb;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models </p>
 <p>SERVER: (localdb)\MSSQLLocalDB</p>
-For the REST API, used the API Controller with actions using the Entity Framework template, using the context class UsersDbContext.
-Both the REST APIs for the JWT controller and the UserInfo tested using Postman.
-The second project, for the UI part, added a UserInfo controller, using EntityFramework for CRUD operations for the users tasks, i.e. Create/Edit/Delete etc.
+<p>For the REST API, used the API Controller with actions using the Entity Framework template, using the context class UsersDbContext.</p>
+<p>Both the REST APIs for the JWT controller and the UserInfo tested using Postman.</p>
+<p>The second project, for the UI part, added a UserInfo controller, using EntityFramework for CRUD operations for the users tasks, i.e. Create/Edit/Delete etc.</p>
 
 Visual Studio 2019
 ASP.NET Core 3.1
@@ -47,9 +47,9 @@ Values ('user1','u1@email.com', 'psw1')
 Insert Into UserInfo(UserName, Email, Password) 
 Values ('user2','u12@email.com', 'psw2')
 -------------------------------------------
-scripts details:
-Scaffold-DbContext “Server=(localdb)\MSSQLLocalDB;Database=UsersDb;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
-SERVER: (localdb)\MSSQLLocalDB
+<p>scripts details:</p>
+<p>Scaffold-DbContext “Server=(localdb)\MSSQLLocalDB;Database=UsersDb;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models</p>
+<p>SERVER: (localdb)\MSSQLLocalDB</p>
 Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=UsersDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
 
  
