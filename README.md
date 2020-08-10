@@ -30,23 +30,23 @@ Examples of the API endpoints:
 <p>https://localhost:44396/api/token (POST) </p>
 
 -------------------------------------------
-Create Table UserInfo(
-UserId Int Identity(1,1) Not null Primary Key,
-UserName Varchar(50) Not null,
-Email Varchar(50) Not null,
-Password Varchar(20) Not null,
-CreatedDate DateTime Default(GetDate()) Not Null)
-GO
-CREATE NONCLUSTERED INDEX [IX_UserInfo_UserId]
-    ON [dbo].[UserInfo]([UserId] ASC);
-GO
-ALTER TABLE [dbo].[UserInfo]
-    ADD CONSTRAINT [PK_UserInfo] PRIMARY KEY CLUSTERED ([UserId] ASC);
-GO
-Insert Into UserInfo(UserName, Email, Password) 
-Values ('user1','u1@email.com', 'psw1')
-Insert Into UserInfo(UserName, Email, Password) 
-Values ('user2','u12@email.com', 'psw2')
+<p>Create Table UserInfo(</p>
+<p>UserId Int Identity(1,1) Not null Primary Key,</p>
+<p>UserName Varchar(50) Not null,</p>
+<p>Email Varchar(50) Not null,</p>
+<p>Password Varchar(20) Not null,</p>
+<p>CreatedDate DateTime Default(GetDate()) Not Null)</p>
+<p>GO</p>
+<p>CREATE NONCLUSTERED INDEX [IX_UserInfo_UserId]</p>
+<p>    ON [dbo].[UserInfo]([UserId] ASC);</p>
+<p>GO</p>
+<p>ALTER TABLE [dbo].[UserInfo]</p>
+<p>    ADD CONSTRAINT [PK_UserInfo] PRIMARY KEY CLUSTERED ([UserId] ASC);</p>
+<p>GO</p>
+<p>Insert Into UserInfo(UserName, Email, Password) </p>
+<p>Values ('user1','u1@email.com', 'psw1')</p>
+<p>Insert Into UserInfo(UserName, Email, Password) </p>
+<p>Values ('user2','u12@email.com', 'psw2')</p>
 -------------------------------------------
 <p>scripts details:</p>
 <p>Scaffold-DbContext “Server=(localdb)\MSSQLLocalDB;Database=UsersDb;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models</p>
