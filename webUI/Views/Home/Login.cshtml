@@ -1,0 +1,93 @@
+﻿@model webUI.Models.UserInfo
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+    <style type="text/css">
+        .bs-example {
+            /*height: 220px;*/
+        }
+
+        .centerlook {
+            padding-left: 400px;
+            font-weight: bold;
+            width: 1000px;
+        }
+
+        .error {
+            padding-left: 400px;
+            font-weight: bold;
+            width: 1000px;
+            color: red;
+        }
+
+        .loginbtn {
+            padding-left: 500px;
+        }
+    </style>
+
+<body>
+
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        <div class="bs-example" style="border:2px solid gray;">
+
+            <div class="form-group centerlook">
+                <h1> Login </h1>
+            </div>
+            <div class="form-group centerlook">
+                <label>UserName: </label>
+                <label>
+                    @Html.EditorFor(model => model.UserName)
+                    @Html.ValidationMessageFor(model => model.UserName)
+                </label>
+            </div>
+            <div class="form-group centerlook">
+                <label>Password:</label>
+                <label>
+                    @Html.EditorFor(model => model.Password)
+                    @Html.ValidationMessageFor(model => model.Password)
+                </label>
+            </div>
+            <div class="form-group error">
+                @if (@ViewBag.Failedcount != null)
+                {
+
+                    @*<label> Failed Attempt count is: @ViewBag.Failedcount</label>*@
+                }
+
+                @if (@ViewBag.NotValidUser != null)
+                {
+
+                    <label> @ViewBag.NotValidUser</label>
+                }
+                @if (@ViewBag.UserName != null)
+                {
+                    @*<div class="form-group centerlook">*@
+                        <label style="color:green">User Details:</label><br />
+                        <label style="color:green">
+                            <b>
+                                Name: @ViewBag.UserName<br />
+                                <b>
+                                    Id: @ViewBag.Id<br />
+                                    @*<b>Password: @ViewBag.Password<br />*@
+                        </label>
+                    @*</div>*@
+                }
+            </div>
+            <div class="loginbtn">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </div>
+    }
+
+</body>
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
